@@ -8,6 +8,10 @@ class User(db.Model):
     email = db.Column(db.String(120), nullable=False, unique=True)
     user_type = db.Column(db.String(20), nullable=False)
 
+    #Relationship to Student and Admin
+    student = db.relationship('Student', back_populates='user', uselist=False)
+    admin = db.relationship('Admin', back_populates='user', uselist=False)
+
     def __init__(self, username, password, email, user_type):
         self.username = username
         self.set_password(password)
