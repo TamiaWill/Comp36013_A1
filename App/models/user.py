@@ -5,10 +5,15 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username =  db.Column(db.String(20), nullable=False, unique=True)
     password = db.Column(db.String(120), nullable=False)
+    email = db.Column(db.String(120), nullable=False, unique=True)
+    user_type = db.Column(db.String(20), nullable=False)
 
-    def __init__(self, username, password):
+    def __init__(self, username, password, email, user_type):
         self.username = username
         self.set_password(password)
+        self.email = email
+        self.user_type = user_type
+
 
     def get_json(self):
         return{
