@@ -2,7 +2,7 @@ from App.database import db
 from .user import User
 
 class Student(User):
-    studentID = db.Column(db.Integer, db.ForeignKey('users.userID'), primary_key=True)
+    studentID = db.Column(db.Integer, db.ForeignKey('user.id'), primary_key=True)
     name = db.Column(db.String(20), nullable=False)
     year = db.Column(db.String(10), nullable=False)
     major = db.Column(db.String(50), nullable=False)
