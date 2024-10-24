@@ -1,5 +1,6 @@
+# Add to application (import model to make available to the rest of the application)
+# Everytime a model is formed, re-initialiation the database to ensure everything is working
+
+from .Student import *
+
 from .user import *
-from .student import *
-from .admin import *
-from .competition import *
-from .results import *
