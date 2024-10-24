@@ -8,11 +8,11 @@ class Result(db.Model):
     position = db.Column(db.Integer)
     score = db.Column(db.Float)
     # Foreign keys: Student and Competition
-    studentID = db.Column(db.Integer, db.ForeignKey('students.studentID'), nullable=False)
-    competitionID = db.Column(db.Integer, db.ForeignKey('competitions.competitionID'), nullable=False)
+    #studentID = db.Column(db.Integer, db.ForeignKey('students.studentID'), nullable=False)
+    #competitionID = db.Column(db.Integer, db.ForeignKey('competitions.competitionID'), nullable=False)
 
     def __init__(self, position, score, studentID, competitionID):
         self.position = position
         self.score = score
-        self.studentID = studentID
+        #self.studentID = studentID
         self.competitionID = competitionID

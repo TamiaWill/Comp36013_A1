@@ -10,12 +10,13 @@ from App.controllers import ( create_user, get_all_users_json, get_all_users, in
 
 # This commands file allow you to create convenient CLI commands for testing controllers
 
-app = create_app()
-migrate = get_migrate(app)
+
+app = create_app()                          #Initializes the Flask app by calling a function from App.main.
+migrate = get_migrate(app)                  #Initializes database migration tools for the app.
 
 # This command creates and initializes the database
-@app.cli.command("init", help="Creates and initializes the database")
-def init():
+@app.cli.command("init", help="Creates and initializes the database")              #Defines a CLI command flask init that calls the initialize() function to set up the database.
+def init(): #The init() command initializes the database:
     initialize()
     print('database intialized')
 
@@ -25,7 +26,7 @@ User Commands
 
 # Commands can be organized using groups
 
-# create a group, it would be the first argument of the comand
+# create a group for user-related commands, it would be the first argument of the command
 # eg : flask user <command>
 user_cli = AppGroup('user', help='User object commands') 
 
@@ -36,8 +37,8 @@ user_cli = AppGroup('user', help='User object commands')
 def create_user_command(username, password):
     create_user(username, password)
     print(f'{username} created!')
-
 # this command will be : flask user create bob bobpass
+
 
 @user_cli.command("list", help="Lists users in the database")
 @click.argument("format", default="string")

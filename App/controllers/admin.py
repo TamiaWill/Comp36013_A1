@@ -1,4 +1,4 @@
-from App.models import Admin, User, Competition, Result
+""" from App.models import Admin, User, Competition, Result
 from App.database import db
 import csv
 from flask import request, jsonify
@@ -118,4 +118,4 @@ def import_results():
 
         return jsonify({"message": "Results imported successfully", "imported_count": len(results)})
 
-    return jsonify({"message": "Failed to import results."}), 500
+    return jsonify({"message": "Failed to import results."}), 500 """

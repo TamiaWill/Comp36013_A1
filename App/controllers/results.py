@@ -1,4 +1,4 @@
-from App.models import Result, User, Competition
+""" from App.models import Result, User, Competition
 from App.database import db
 
 def create_result(student_id, competition_id, score):
@@ -46,4 +46,4 @@ def delete_result(result_id):
 
     db.session.delete(result)
     db.session.commit()
-    return {"message": "Result deleted successfully."}
+    return {"message": "Result deleted successfully."} """

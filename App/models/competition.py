@@ -7,12 +7,12 @@ class Competition (db.Model):
     start = db.Column(db.Date, nullable=False)
     end = db.Column(db.Date, nullable=False)
     # Relationship with Result
-    results = db.relationship('Result', backref='competition', lazy=True)
+    #results = db.relationship('Result', backref='competition', lazy=True)
     # Foreign key: competition to Admin
-    adminID = db.Column(db.Integer, db.ForeignKey('admins.userID'), nullable=False)
+    #adminID = db.Column(db.Integer, db.ForeignKey('admins.userID'), nullable=False)
 
-    def __init__(self, title, description, start, end):
+    """ def __init__(self, title, description, start, end):
         self.title = title
         self.description = description
         self.start = start
-        self.end = end
+        self.end = end """

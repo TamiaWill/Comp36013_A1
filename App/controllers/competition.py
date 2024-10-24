@@ -1,4 +1,4 @@
-from App.models import Competition, Result, User
+""" from App.models import Competition, Result, User
 from App.database import db
 
 
@@ -49,4 +49,4 @@ def delete_competition(competition_id):
 
     db.session.delete(competition)
     db.session.commit()
-    return {"message": "Competition deleted successfully."}
+    return {"message": "Competition deleted successfully."} """

@@ -1,4 +1,4 @@
-from App.models import Student, User, Competition, Result
+""" from App.models import Student, User, Competition, Result
 from App.database import db
 
 def create_student(username, password, name, year, major):
@@ -69,4 +69,4 @@ def participate_in_competition(student_id, competition_id):
         db.session.commit()
         return {"message": f"Student {student_id} successfully registered for competition {competition_id}."}
     
-    return {"message": "Student or competition not found."}
+    return {"message": "Student or competition not found."} """
