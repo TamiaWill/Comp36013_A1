@@ -9,7 +9,7 @@ class Student(db.Model):
     username =  db.Column(db.String(20), nullable=False, unique=True)
     password = db.Column(db.String(120), nullable=False)
     #Relationship fields
-    results = db.relationship('Result', secondary='Student' backref='student', lazy=True)
+    competitions = db.relationship('Competition', secondary='Results', backref='student', lazy=True)
     
 
     def __init__(self, username, password, email, user_type):

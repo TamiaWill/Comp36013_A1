@@ -9,7 +9,7 @@ class Competition(db.Model):
     #Foreign Key(s) 
     creator = db.Column(db.Integer, db.ForeignKey('admin.id'), nullable=False)
     #Relationship field
-    results = db.relationship('Result', backref='competition', lazy=True)
+    students = db.relationship('Student', secondary='Results', backref='competition', lazy=True)
 
 
     def __repr__(self):
