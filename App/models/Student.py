@@ -8,11 +8,9 @@ class Student(db.Model):
     email = db.Column(db.String(120), nullable=False, unique=True)
     username =  db.Column(db.String(20), nullable=False, unique=True)
     password = db.Column(db.String(120), nullable=False)
+    #Relationship fields
+    results = db.relationship('Result', secondary='Student' backref='student', lazy=True)
     
-
-    #Relationship to Student and Admin
-    #student = db.relationship('Student', back_populates='user', uselist=False)
-    #admin = db.relationship('Admin', back_populates='user', uselist=False)
 
     def __init__(self, username, password, email, user_type):
         self.username = username
